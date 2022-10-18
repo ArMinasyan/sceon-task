@@ -1,6 +1,22 @@
 # API Documentation
 
-GET /users
+All response have this structure:
+``` 
+{
+  statusCode: number;
+  success: boolean;
+  data: any;
+  message: string;
+  validationError: {
+      property: string;
+      message: string;
+  } | {};
+}
+```
+#
+
+### Method endpoint
+	GET /users
 
 ### Description
 	Get all user list by given query parameter, all parameters is optional.
@@ -24,7 +40,8 @@ GET /users
 
 <hr>
 
-GET /users/{id}
+### Method endpoint
+	GET /users/{id}
 
 ### Description 
 	Get user data by give id, where user id is required.
@@ -44,7 +61,8 @@ GET /users/{id}
 
 <hr>
 
-POST /users
+### Method endpoint
+	POST /users
 
 ### Description
 	Create a new user, by given parameteres, all parameters are required.
@@ -67,7 +85,8 @@ POST /users
 
 <hr>
 
-PUT /users/{id}
+### Method endpoint
+	PUT /users/{id}
 
 ### Description
 	Update user data, by given user id, all parameters are optional.
@@ -88,7 +107,8 @@ PUT /users/{id}
 | False | 404 | User by id={id} not found | -
 
 <hr>
-DELETE /users/{id}
+### Method endpoint
+	DELETE /users/{id}
 
 ### Description
 	Delete user data by given user id, where user id is required.
@@ -96,7 +116,7 @@ DELETE /users/{id}
 ### Parameters
 
 | Name | Description | Type | Location | Required
-| - | - | - | - |
+| - | - | - | - | - |
 | id | User id | number | param | true
 
 ### Responses
