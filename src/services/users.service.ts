@@ -53,7 +53,7 @@ export class UsersService extends BaseService {
       return user;
     });
 
-    if (query.offset >= 0 && query.limit >= 0) {
+    if (query.offset >= 0 || query.limit >= 0) {
       users = users.slice(query.offset, query.offset + query.limit);
     }
 
@@ -67,6 +67,7 @@ export class UsersService extends BaseService {
     } else {
       return this.responseGenerator
         .setStatus(404)
+        .setSuccess(false)
         .setMessage(`User by id=${id} not found`)
         .generate();
     }
@@ -77,6 +78,7 @@ export class UsersService extends BaseService {
     if (user.length > 0) {
       return this.responseGenerator
         .setStatus(409)
+        .setSuccess(false)
         .setMessage(`User already created.`)
         .generate();
     }
@@ -101,6 +103,7 @@ export class UsersService extends BaseService {
     if (user.length === 0) {
       return this.responseGenerator
         .setStatus(404)
+        .setSuccess(false)
         .setMessage(`User by id=${id} not found`)
         .generate();
     }
@@ -130,6 +133,7 @@ export class UsersService extends BaseService {
     if (user.length === 0) {
       return this.responseGenerator
         .setStatus(404)
+        .setSuccess(false)
         .setMessage(`User by id=${id} not found`)
         .generate();
     }
