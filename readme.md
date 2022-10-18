@@ -56,7 +56,7 @@ All response have this structure:
 
 | Success | Status Code | Message | Data
 | - | - | - | - |
-| True | 200 | - | User info
+| True | 200 | - | ``` {"id": number, "email": string, "first_name": string, "last_name": string,"password": string } ```
 | False | 404 | User by id={id} not found | -
 
 <hr>
