@@ -1,26 +1,21 @@
-<h2>
-API Documentation
-</h2>
+# API Documentation
 
-<a style="font-size: 20px"> 
-			<span style="color: blue">GET</span>  /users
-</a>
+GET /users
 
-<a style="font-size: 20px; color: black"> Description </a>
+### Description
+	Get all user list by given query parameter, all parameters is optional.
 
-Get all user list by given query parameter, all parameters is optional.
-
-<a style="font-size: 20px; color: black"> Parameters </a>
+### Parameters 
 
 | Name | Description | Type | Location | Required
-| - | - | - | - |
+| - | - | - | - | - |
 | limit | Take count | number | query | false
 | offset  | Offset count | number | query | false
 | first_name | User first name | string | query | false
 | last_name | User last name | string | query | false
 | email | User email | string | query | false
 
-<a style="font-size: 20px; color: black"> Responses </a>
+### Responses
 
 | Success | Status Code | Message | Data
 | - | - | - | - |
@@ -29,20 +24,18 @@ Get all user list by given query parameter, all parameters is optional.
 
 <hr>
 
-<a style="font-size: 20px"> 
-			<span style="color: blue">Get by id</span>  /users/{id}
-</a>
-<a style="font-size: 20px; color: black"> Description </a>
+GET /users/{id}
 
-Get user data by give id, where user id is required.
+### Description 
+	Get user data by give id, where user id is required.
 
-<a style="font-size: 20px; color: black"> Parameters </a>
+### Parameters
 
 | Name | Description | Type | Location | Required
-| - | - | - | - |
+| - | - | - | - | - |
 | id | User id | number | query | true
 
-<a style="font-size: 20px; color: black"> Responses </a>
+### Responses
 
 | Success | Status Code | Message | Data
 | - | - | - | - |
@@ -51,23 +44,21 @@ Get user data by give id, where user id is required.
 
 <hr>
 
-<a style="font-size: 20px"> 
-			<span style="color: blue">POST</span>  /users
-</a>
-<a style="font-size: 20px; color: black"> Description </a>
+POST /users
 
-Create a new user, by given parameteres, all parameters are required.
+### Description
+	Create a new user, by given parameteres, all parameters are required.
 
-<a style="font-size: 20px; color: black"> Parameters </a>
+### Parameters
 
 | Name | Description | Type | Location | Required
-| - | - | - | - |
+| - | - | - | - | - |
 | email | Email address | string | body | true
 | first_name | First anme | string | body | true
 | last_name | Lirst anme | string | body | true
 | password | Password | string | body | true
 
-<a style="font-size: 20px; color: black"> Responses </a>
+### Responses
 
 | Success | Status Code | Message | Data
 | - | - | - | - |
@@ -76,22 +67,20 @@ Create a new user, by given parameteres, all parameters are required.
 
 <hr>
 
-<a style="font-size: 20px"> 
-			<span style="color: blue">PUT</span>  /users/{id}
-</a>
-<a style="font-size: 20px; color: black"> Description </a>
+PUT /users/{id}
 
-Update user data, by given user id, all parameters are optional.
+### Description
+	Update user data, by given user id, all parameters are optional.
 
-<a style="font-size: 20px; color: black"> Parameters </a>
+### Parameters
 
 | Name | Description | Type | Location | Required
-| - | - | - | - |
+| - | - | - | - | - |
 | first_name | First anme | string | body | false
 | last_name | Lirst anme | string | body | false
 | password | Password | string | body | false
 
-<a style="font-size: 20px; color: black"> Responses </a>
+### Responses
 
 | Success | Status Code | Message | Data
 | - | - | - | - |
@@ -99,21 +88,18 @@ Update user data, by given user id, all parameters are optional.
 | False | 404 | User by id={id} not found | -
 
 <hr>
+DELETE /users/{id}
 
-<a style="font-size: 20px"> 
-			<span style="color: blue">DELETE</span>  /users/{id}
-</a>
-<a style="font-size: 20px; color: black"> Description </a>
+### Description
+	Delete user data by given user id, where user id is required.
 
-Delete user data by given user id, where user id is required.
-
-<a style="font-size: 20px; color: black"> Parameters </a>
+### Parameters
 
 | Name | Description | Type | Location | Required
 | - | - | - | - |
 | id | User id | number | param | true
 
-<a style="font-size: 20px; color: black"> Responses </a>
+### Responses
 
 | Success | Status Code | Message | Data
 | - | - | - | - |
